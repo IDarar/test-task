@@ -1,0 +1,12 @@
+<yandex>
+    <kafka>
+        <security_protocol>sasl_ssl</security_protocol>
+        <sasl_mechanism>SCRAM-SHA-512</sasl_mechanism>
+        <sasl_username>hoq0cmws</sasl_username>
+        <sasl_password>4zNgnuNsWbb3MkbjC3zvNxG1rUTG4YHb</sasl_password>
+        <ssl_ca_location>/etc/clickhouse-server/ssl/kafka-ca-qa.crt</ssl_ca_location>
+    </kafka>
+    <default_profile>default</default_profile>
+    <default_database>default</default_database>
+
+</yandex>

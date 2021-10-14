@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option go_package = "/test_task";
+import "google/protobuf/timestamp.proto";
+
+message User {
+    int64 ID = 1;
+    string Name = 2; 
+    google.protobuf.Timestamp CreatedAt = 3;
+}
+
+message CreateUserReq {
+    string Name = 1; 
+}
+
+message UsersListReq {}
+
+message UsersListResp {
+    repeated User Users = 1;
+}
+
+message DeleteUserReq {
+    int64 ID = 1;
+}
+
+message DeleteUserResp{}
+
+service Users {
+    rpc Create (CreateUserReq) returns (User);
+    rpc UsersList (UsersListReq) returns (UsersListResp);
+    rpc Delete (DeleteUserReq) returns (DeleteUserResp);
+}
