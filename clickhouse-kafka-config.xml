@@ -1,0 +1,23 @@
+<!-- -
+    Config for kafka, should be included in /etc/clickhouse-server/config.xml
+<!- -->
+
+<yandex>
+    <kafka>
+    	<max_poll_interval_ms>60000</max_poll_interval_ms>
+    	<session_timeout_ms>60000</session_timeout_ms>
+    	<heartbeat_interval_ms>10000</heartbeat_interval_ms>
+    	<reconnect_backoff_ms>5000</reconnect_backoff_ms>
+    	<reconnect_backoff_max_ms>60000</reconnect_backoff_max_ms>
+    	<request_timeout_ms>20000</request_timeout_ms>
+     	<retry_backoff_ms>500</retry_backoff_ms>
+   	    <message_max_bytes>20971520</message_max_bytes>
+    	<debug>all</debug><!-- only to get the errors -->
+    	<sasl_kerberos_min_time_before_relogin>0</sasl_kerberos_min_time_before_relogin>   
+	    <security_protocol>sasl_ssl</security_protocol>
+    	<sasl_mechanism>SCRAM-SHA-512</sasl_mechanism>
+     	<ssl_ca_location>/etc/clickhouse-server/ssl/kafka-ca-qa.crt</ssl_ca_location>
+      	<sasl_username>hoq0cmws</sasl_username>
+     	<sasl_password>4zNgnuNsWbb3MkbjC3zvNxG1rUTG4YHb</sasl_password>
+    </kafka>
+</yandex>

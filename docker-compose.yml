@@ -35,18 +35,19 @@ services:
       - 6464:6464
     volumes:
       - ./config.json:/app/config.json  
-  clickhouse:
-    image: yandex/clickhouse-server
-    expose:
-      - 8123
-      - 9000
-    ports:
-      - 9000:9000
-      - 8123:8123
-    volumes:
-      - ./ch-config.xml:/etc/clickhouse-server/config.xml
-      - ./users.xml:/etc/clickhouse-server/users.xml
-      - ./ca.crt:/etc/clickhouse-server/ssl/kafka-ca-qa.crt
+  #I omit clickhouse because it needs many config files    
+  #clickhouse:
+  #  image: yandex/clickhouse-server
+  #  expose:
+  #    - 8123
+  #    - 9000
+  #  ports:
+  #    - 9000:9000
+  #    - 8123:8123
+  #  volumes:
+  #    - ./ch-config.xml:/etc/clickhouse-server/config.xml
+  #    - ./users.xml:/etc/clickhouse-server/users.xml
+  #    - ./ca.crt:/etc/clickhouse-server/ssl/kafka-ca-qa.crt
 networks: 
   app:   
 volumes:

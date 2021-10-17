@@ -1,0 +1,13 @@
+<!-- -
+    Config for time fromat. Is needed because initially clickhouse does not support default time format such as in Go.
+    Config file should be added in /etc/clickhouse-server/config.xml /etc/clickhouse-server/users.d
+<!- -->
+
+<?xml version="1.0"?>
+<yandex>
+   <profiles>
+       <default>
+           <date_time_input_format>best_effort</date_time_input_format>
+       </default>
+   </profiles>
+</yandex>
